@@ -1,13 +1,11 @@
 <div class="submenu-container">
   <ul>
-    <li *ngFor="let subItem of items">
-      <a href="javascript:void(0)" (click)="onItemClick(subItem, $event)">
-        {{ subItem.label }}
-      </a>
-      <!-- Recursive app-submenu could be added here if deeper nesting is desired -->
-      <!-- <div *ngIf="subItem.submenu" #submenuContainer> -->
-      <!--   <app-submenu [items]="subItem.submenu"></app-submenu> -->
-      <!-- </div> -->
-    </li>
+    @for (subItem of items; track subItem.label) {
+      <li>
+        <a href="javascript:void(0)" (click)="onItemClick(subItem, $event)">
+          {{ subItem.label }}
+        </a>
+      </li>
+    }
   </ul>
 </div>
