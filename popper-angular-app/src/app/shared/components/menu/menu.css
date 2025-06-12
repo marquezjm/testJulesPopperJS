@@ -1,0 +1,42 @@
+.menu-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  padding: 5px 0; /* Reduced padding */
+  display: none; /* Hidden by default */
+  position: absolute;
+  z-index: 1000;
+  min-width: 180px; /* Increased min-width */
+  border-radius: 4px; /* Added border-radius */
+}
+
+.menu-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-container ul li {
+  position: relative; /* For submenu positioning context */
+}
+
+.menu-container ul li a {
+  display: block;
+  padding: 10px 15px; /* Adjusted padding */
+  text-decoration: none;
+  color: #333;
+  font-size: 14px; /* Added font-size */
+}
+
+.menu-container ul li a:hover {
+  background-color: #007bff; /* Changed hover color */
+  color: white; /* Changed hover text color */
+}
+
+/* Style for items that have a submenu */
+.menu-container ul li a.has-submenu::after {
+  content: "►"; /* Arrow indicating submenu */
+  float: right;
+  margin-left: 10px;
+  font-size: 0.8em;
+}

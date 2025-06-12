@@ -1,0 +1,16 @@
+<div class="menu-container">
+  <ul>
+    <li *ngFor="let item of items; let i = index"
+        [class.has-submenu]="item.submenu">
+      <a href="javascript:void(0)"
+         (click)="onItemClick(item, $event)"
+         #submenuTrigger
+         [class.has-submenu]="item.submenu">
+        {{ item.label }}
+      </a>
+      <div *ngIf="item.submenu" #submenuContainer>
+        <app-submenu [items]="item.submenu"></app-submenu>
+      </div>
+    </li>
+  </ul>
+</div>

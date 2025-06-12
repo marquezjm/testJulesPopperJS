@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <ul>
+      <li #menuTrigger><a href="javascript:void(0)">File</a>
+        <div #menuElement><app-menu [items]="getMenuItemsForIndex(0)"></app-menu></div>
+      </li>
+      <li #menuTrigger><a href="javascript:void(0)">Edit</a>
+        <div #menuElement><app-menu [items]="getMenuItemsForIndex(1)"></app-menu></div>
+      </li>
+      <li #menuTrigger><a href="javascript:void(0)">View</a>
+        <div #menuElement><app-menu [items]="getMenuItemsForIndex(2)"></app-menu></div>
+      </li>
+      <li #menuTrigger><a href="javascript:void(0)">Help</a>
+        <div #menuElement><app-menu [items]="getMenuItemsForIndex(3)"></app-menu></div>
+      </li>
+    </ul>
+  </nav>
+</header>

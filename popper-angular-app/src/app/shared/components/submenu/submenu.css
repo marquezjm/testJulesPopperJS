@@ -1,0 +1,32 @@
+.submenu-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Softer shadow */
+  padding: 5px 0; /* Reduced padding */
+  display: none; /* Hidden by default */
+  position: absolute;
+  left: 100%; /* Position to the right of the parent item */
+  top: -1px; /* Align with the top of the parent item, adjust as needed */
+  z-index: 1100;
+  min-width: 160px;
+  border-radius: 4px;
+}
+
+.submenu-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu-container ul li a {
+  display: block;
+  padding: 8px 15px; /* Adjusted padding */
+  text-decoration: none;
+  color: #444;
+  font-size: 13px; /* Added font-size */
+}
+
+.submenu-container ul li a:hover {
+  background-color: #007bff;
+  color: white;
+}
